@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HoriSub 设置</title></head>
+<body class="options">
+<main>
+  <header class="options-header">
+    <div class="brand"><img src="/icons/icon48.png" alt=""><span>HoriSub</span></div>
+    <h1>字幕设置</h1>
+    <p>识别、翻译和朗读在本机进行。首次准备模型需要联网下载。</p>
+  </header>
+  <form id="form">
+    <div class="columns">
+      <section class="panel fields">
+        <h2>引擎与语言</h2>
+        <label>运行模式<select id="run"></select></label>
+        <label>计算设备<select id="backend"><option value="auto">自动选择</option><option value="cpu">仅 CPU</option></select></label>
+        <label id="native-select">本机语音模型<select id="nativeModel"></select></label>
+        <label id="browser-select">浏览器语音模型<select id="browserModel"></select></label>
+        <label>文字翻译模型<select id="translator"></select></label>
+        <div class="split">
+          <label>源语言<select id="source"></select></label>
+          <label>目标语言<select id="target"></select></label>
+        </div>
+        <label>字幕来源<select id="captionSource"></select></label>
+        <label>术语表 <small>每行填写原词=译名，最多 600 字</small><textarea id="glossary" rows="3" maxlength="600"></textarea></label>
+        <div class="inline stacked">
+          <button class="secondary" type="button" id="selftest">运行本地语音自检</button>
+          <button class="quiet" type="button" id="embeds">授权常见嵌入播放器</button>
+        </div>
+        <p id="test-result" class="test-result" aria-live="polite"></p>
+      </section>
+      <section class="panel fields" aria-labelledby="model-title">
+        <h2 id="model-title">模型管理</h2>
+        <div id="native-status" class="fields">
+          <div class="id-row"><span>扩展 ID</span><code id="extension-id"></code><button id="copy" type="button" class="quiet">复制</button></div>
+          <p id="host-status" role="status">正在检测本机引擎…</p>
+          <div class="inline stacked">
+            <button class="quiet" id="refresh" type="button">重新检测注册</button>
+            <a href="https://github.com/hhhoratioxu/HoriSub/releases/latest" target="_blank" rel="noreferrer">下载本机引擎</a>
+          </div>
+        </div>
+        <div id="models"></div>
+        <p id="model-result" role="status"></p>
+        <p>本机模式和浏览器模式使用独立缓存。修复会校验已保存文件并补齐缺失文件。</p>
+      </section>
+    </div>
+    <section class="panel fields">
+      <h2>字幕显示</h2>
+      <div class="appearance">
+        <label>显示模式<select id="mode"></select></label>
+        <label>字号（px）<input id="size" type="number" min="14" max="66" required></label>
+        <label>文字颜色<input id="color" type="color"></label>
+        <label>背景不透明度（%）<input id="opacity" type="number" min="0" max="100" required></label>
+        <label>描边（px）<input id="outline" type="number" min="0" max="5" required></label>
+        <label>水平位置（%）<input id="x" type="number" min="8" max="92" required></label>
+        <label>垂直位置（%）<input id="y" type="number" min="12" max="95" required></label>
+        <label>显示延时（ms）<input id="delay" type="number" min="0" max="5000" required></label>
+      </div>
+      <div class="inline stacked">
+        <label class="check"><input id="visible" type="checkbox"> 显示字幕</label>
+        <button class="quiet" id="reset" type="button">恢复默认样式</button>
+        <button class="quiet" id="shortcuts" type="button">配置 Chrome 快捷键</button>
+      </div>
+    </section>
+    <section class="panel fields">
+      <h2>中文朗读与记录</h2>
+      <div class="inline stacked">
+        <label class="check"><input id="speak" type="checkbox"> 朗读实时中文译文</label>
+        <label class="check"><input id="duck" type="checkbox"> 播报时降低原声</label>
+      </div>
+      <div class="appearance">
+        <label>离线系统声音<select id="voice"></select></label>
+        <label>语速<input id="rate" type="number" min=".65" max="1.45" step=".05" required></label>
+        <label>音量（%）<input id="speechVolume" type="number" min="0" max="100" step="1" required></label>
+      </div>
+      <p id="voice-note"></p>
+      <label class="check"><input id="keep" type="checkbox"> 保留最近 4 个会话的字幕历史</label>
+      <button id="history" class="quiet" type="button">查看、复制或导出字幕记录</button>
+    </section>
+    <section class="settings-footer">
+      <p>运行模式、模型和计算设备在下次开始字幕时生效。自检使用已保存的设置。</p>
+      <p id="save-result" role="status" hidden></p>
+      <button class="primary" id="save" type="submit" disabled>保存设置</button>
+    </section>
+  </form>
+</main>
+<script type="module" src="/src/ui/options.ts"></script>
+</body>
+</html>

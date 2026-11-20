@@ -1,0 +1,60 @@
+{
+  "manifest_version": 3,
+  "name": "HoriSub",
+  "version": "0.2.1",
+  "description": "把当前标签页的声音转为实时双语字幕。",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabCapture",
+    "offscreen",
+    "storage",
+    "nativeMessaging",
+    "tts",
+    "unlimitedStorage"
+  ],
+  "optional_host_permissions": [
+    "https://huggingface.co/*",
+    "https://*.hf.co/*",
+    "https://*.xethub.hf.co/*",
+    "https://www.youtube.com/*",
+    "https://www.youtube-nocookie.com/*",
+    "https://player.twitch.tv/*",
+    "https://player.bilibili.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "HoriSub",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "commands": {
+    "toggle-captions": {
+      "suggested_key": {
+        "default": "Alt+Shift+S"
+      },
+      "description": "显示或隐藏 HoriSub 字幕"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5VebJSlxF2MqZWOMgW8t1QzGGLIcqw1FTX7gZhE4wVv7SQqwTspMqcQ4yPM/ytFn9wIQcyU7xPKfM24ldaBnVgIgvB5XF6rlczMXFZ2eZIp/vMuaNaOSxG3b3TxxRmznBbCZVD8CgwciVTq1yiFjXuMvaL2EM+FQW11tewbTOYa+fTa6kYfxpR1XORIl6b0zhKxoXsgAiwNni8sJlCzNwqGj2ar7ZpDSSB1DQWBcD0eJTr6V3zf+2xKGGnJZf+BLI6Nc+1RGcGpBDEFvqfpCYVjnKbQu6eX78G3cl2TPbiZVZRC2PTfeYOr5L9T/LNi1un9yQz23n+AWad8y6ydzBwIDAQAB"
+}

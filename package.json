@@ -1,0 +1,31 @@
+{
+  "name": "horisub",
+  "version": "0.2.1",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "build": "tsc --noEmit && node scripts/build.mjs",
+    "package": "npm run build && node scripts/package.mjs",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "test:chrome": "node tests/chrome.mjs",
+    "test:native": "node tests/native.mjs",
+    "test:soak": "node tests/soak.mjs"
+  },
+  "dependencies": {
+    "@echogarden/fvad-wasm": "0.2.0",
+    "@huggingface/transformers": "3.8.1",
+    "@noble/hashes": "2.4.0",
+    "opencc-js": "1.4.2"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.41",
+    "@types/node": "^24.0.0",
+    "playwright": "^1.61.0",
+    "tsx": "^4.23.0",
+    "typescript": "~5.9.3",
+    "vite": "^8.3.8"
+  }
+}

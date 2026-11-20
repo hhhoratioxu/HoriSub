@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HoriSub 字幕记录</title></head>
+<body class="options">
+<main>
+  <header class="options-header">
+    <div class="brand"><img src="/icons/icon48.png" alt=""><span>HoriSub</span></div>
+    <h1>字幕记录</h1>
+  </header>
+  <section class="panel fields">
+    <div class="split">
+      <label>会话<select id="session"></select></label>
+      <label>搜索<input id="search" type="search" placeholder="查找原文或译文"></label>
+      <label>查看与导出内容<select id="mode"></select></label>
+      <label>导出时间轴<select id="timeline"></select></label>
+    </div>
+    <div class="inline stacked">
+      <button class="secondary" id="txt" type="button">TXT</button>
+      <button class="secondary" id="srt" type="button">SRT</button>
+      <button class="secondary" id="vtt" type="button">VTT</button>
+      <button class="quiet" id="copy-selected" type="button">复制选中</button>
+      <button class="quiet" id="clear" type="button">清空记录</button>
+    </div>
+    <p id="info" role="status"></p>
+    <div id="list" class="transcript"></div>
+  </section>
+</main>
+<script type="module" src="/src/ui/history.ts"></script>
+</body>
+</html>

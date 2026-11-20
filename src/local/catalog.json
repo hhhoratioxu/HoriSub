@@ -1,0 +1,254 @@
+{
+  "native-base": {
+    "label": "Whisper base Q5_1",
+    "repo": "ggerganov/whisper.cpp",
+    "revision": "5359861c739e955e79d9a303bcbc70fb988958b1",
+    "license": "MIT",
+    "bytes": 59707625,
+    "files": [
+      {
+        "path": "ggml-base-q5_1.bin",
+        "size": 59707625,
+        "sha256": "422f1ae452ade6f30a004d7e5c6a43195e4433bc370bf23fac9cc591f01a8898"
+      }
+    ]
+  },
+  "native-small": {
+    "label": "Whisper small Q5_1",
+    "repo": "ggerganov/whisper.cpp",
+    "revision": "5359861c739e955e79d9a303bcbc70fb988958b1",
+    "license": "MIT",
+    "bytes": 190085487,
+    "files": [
+      {
+        "path": "ggml-small-q5_1.bin",
+        "size": 190085487,
+        "sha256": "ae85e4a935d7a567bd102fe55afc16bb595bdb618e11b2fc7591bc08120411bb"
+      }
+    ]
+  },
+  "browser-base": {
+    "label": "Whisper base int8",
+    "repo": "Xenova/whisper-base",
+    "revision": "64da57285918e20ea79ea5c88eed7197933abaa8",
+    "license": "Apache-2.0",
+    "bytes": 79677901,
+    "files": [
+      {
+        "path": "config.json",
+        "size": 2248,
+        "git": "1b9048005c9f52ee7aa93c2e57bc99cf92b014b4"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 3776,
+        "git": "70fc9361d8f658414e36505ebeb58a95cd11e73c"
+      },
+      {
+        "path": "onnx/decoder_model_merged_quantized.onnx",
+        "size": 53707539,
+        "sha256": "a6beb6baabb66f00b6a686d828c95ffca6146d51900cbad0266cad38f64cf861"
+      },
+      {
+        "path": "onnx/encoder_model_quantized.onnx",
+        "size": 23200850,
+        "sha256": "3e345e977b55620a37c0c2b2af0644e019afdfad562dcf71eb929bb7274285f9"
+      },
+      {
+        "path": "preprocessor_config.json",
+        "size": 339,
+        "git": "91876762a536a746d268353c5cba57286e76b058"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 2480466,
+        "git": "1e95340ff836fad1b5932e800fb7b8c5e6d78a74"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 282683,
+        "git": "d13b786c04765fb1a06492b53587752cd67665ea"
+      }
+    ]
+  },
+  "browser-tiny": {
+    "label": "Whisper tiny int8",
+    "repo": "Xenova/whisper-tiny",
+    "revision": "5332fcc35e32a33b86612b9a57a89be7906102b1",
+    "license": "Apache-2.0",
+    "bytes": 43622127,
+    "files": [
+      {
+        "path": "config.json",
+        "size": 2248,
+        "git": "dea913aa8ec7d53db029e97c97a766d534c8da04"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 3716,
+        "git": "72e54ad7340e05287aa731f9d8556b5368be3fe0"
+      },
+      {
+        "path": "onnx/decoder_model_merged_quantized.onnx",
+        "size": 30727765,
+        "sha256": "6c0c125986b007d2e3734bec84c18bda0152071b90b87fadac6d7764499927a0"
+      },
+      {
+        "path": "onnx/encoder_model_quantized.onnx",
+        "size": 10124910,
+        "sha256": "fd9d995b9dcb0520f0dbf6cf68651af639fc385f594d9d876e69ca2802dc438e"
+      },
+      {
+        "path": "preprocessor_config.json",
+        "size": 339,
+        "git": "91876762a536a746d268353c5cba57286e76b058"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 2480466,
+        "git": "1e95340ff836fad1b5932e800fb7b8c5e6d78a74"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 282683,
+        "git": "d13b786c04765fb1a06492b53587752cd67665ea"
+      }
+    ]
+  },
+  "opus": {
+    "label": "OPUS-MT English → Chinese",
+    "repo": "Xenova/opus-mt-en-zh",
+    "revision": "046f55aec303cdee3e0318604406d4df20f1e8ea",
+    "license": "Apache-2.0",
+    "bytes": 119495576,
+    "files": [
+      {
+        "path": "config.json",
+        "size": 1503,
+        "git": "787a84798a695a75720fa01ad2881c8d193c45f2"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 293,
+        "git": "015c3e06e8eac3e32e2078ba3140f246e754ae7b"
+      },
+      {
+        "path": "onnx/decoder_model_merged_quantized.onnx",
+        "size": 60212804,
+        "sha256": "023be4f841f4c47cd65fffcbaa81c0d99d7f7e0138f7ba0e03fa220a4e688aff"
+      },
+      {
+        "path": "onnx/encoder_model_quantized.onnx",
+        "size": 52899742,
+        "sha256": "d3b7912bf6a9bd27e4c074c2df91d4ff3d5b4bc5f7f6c8d7cc9c805c98fbafee"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 6380952,
+        "git": "7106ca5b95c748f039dd9adcc13c7542b997762d"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 282,
+        "git": "5d963ba4e41e1f0926f052dd3d04678d0819f027"
+      }
+    ]
+  },
+  "m2m": {
+    "label": "M2M100 418M int8",
+    "repo": "Xenova/m2m100_418M",
+    "revision": "9c374f0b7aca709787cea97b047bfbbd1559d177",
+    "license": "MIT",
+    "bytes": 639976029,
+    "files": [
+      {
+        "path": "config.json",
+        "size": 908,
+        "git": "4f466cf3049e59ef8bb5de9b67f4275fa8f7257a"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 233,
+        "git": "434f8e78dc0d584e14d179bd47be7e329df86cb0"
+      },
+      {
+        "path": "onnx/decoder_model_merged_quantized.onnx",
+        "size": 344128178,
+        "sha256": "007654bcabb6cea6fd3bde34ce933137b431330b3755781145d7b6906270b45a"
+      },
+      {
+        "path": "onnx/encoder_model_quantized.onnx",
+        "size": 287856370,
+        "sha256": "13a94e354a9140764eb81102d77d3ec6952d796e6f113c651eeb3c3443da0386"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 7988527,
+        "git": "cd68f923c35fc0da05d4bb83125bdcbe6ff9211b"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 1813,
+        "git": "b177ccaad20b2538951a05fcaf7093bd2b0a92b1"
+      }
+    ]
+  },
+  "native-tiny": {
+    "label": "Whisper tiny Q5_1",
+    "repo": "ggerganov/whisper.cpp",
+    "revision": "5359861c739e955e79d9a303bcbc70fb988958b1",
+    "license": "MIT",
+    "bytes": 32152673,
+    "files": [
+      {
+        "path": "ggml-tiny-q5_1.bin",
+        "size": 32152673,
+        "sha256": "818710568da3ca15689e31a743197b520007872ff9576237bda97bd1b469c3d7"
+      }
+    ]
+  },
+  "browser-english": {
+    "label": "Moonshine Tiny int8 · 仅英语",
+    "repo": "onnx-community/moonshine-tiny-ONNX",
+    "revision": "a6da1241cd305dcd64eab1edbd615f2bb9aabb95",
+    "license": "MIT",
+    "bytes": 32079632,
+    "files": [
+      {
+        "path": "config.json",
+        "size": 921,
+        "git": "3b8918edc926194c698c6d3255adac22b50251f6"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 147,
+        "git": "b45f5d83177964a069f943e80225213bd724200f"
+      },
+      {
+        "path": "onnx/decoder_model_merged_quantized.onnx",
+        "size": 20243286,
+        "sha256": "eed87831c3a6103534aae7d47a5d485025c659a1323901513961c39fe8a1a367"
+      },
+      {
+        "path": "onnx/encoder_model_quantized.onnx",
+        "size": 7937661,
+        "sha256": "c6fc4b7bc5af75c0591fd157a1f3829b533d18e9769a888fd95a62e470dd4f4a"
+      },
+      {
+        "path": "preprocessor_config.json",
+        "size": 128,
+        "git": "e519add8190c4ef53802d1d593b7973c12ae68c9"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 3761754,
+        "git": "3e2e6918436f479b267467608eccc4ade30c251c"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 135735,
+        "git": "a712a75cf20ba1c6e6f1761f2b612c7ecc44ffa0"
+      }
+    ]
+  }
+}

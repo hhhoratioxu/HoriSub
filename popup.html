@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HoriSub</title>
+</head>
+<body class="popup">
+  <header class="popup-header">
+    <div class="brand"><img src="/icons/icon48.png" alt=""><span>HoriSub</span></div>
+    <button class="quiet" type="button" id="options">设置</button>
+  </header>
+  <section class="panel now" aria-label="当前标签页">
+    <p id="site" class="domain"></p>
+    <p id="page" class="page">正在读取标签页…</p>
+    <p id="service" class="details"></p><p id="model-ready" class="details"></p>
+  </section>
+  <button id="action" type="button" class="primary" disabled>开始字幕</button>
+  <div class="status" role="status" aria-live="polite">
+    <span id="indicator" class="dot" data-state="idle"></span><span id="state">未开始</span>
+  </div>
+  <p id="notice" class="notice" role="status" hidden></p>
+  <section class="quick-settings" aria-label="字幕选项">
+    <div class="split">
+      <label>源语言<select id="source"></select></label>
+      <label>目标语言<select id="target"></select></label>
+    </div>
+    <label>字幕显示<select id="mode"></select></label>
+    <div class="inline">
+      <label class="check"><input id="visible" type="checkbox" checked> 显示字幕</label>
+      <label class="check"><input id="speech" type="checkbox"> 中文播报</label>
+      <button class="quiet" id="drag" type="button" disabled>拖动位置</button>
+    </div>
+      <div class="tools">
+      <button class="quiet" id="pip" type="button" disabled>画中画</button>
+      <button class="quiet" id="next-player" type="button" disabled>切换播放器</button>
+      <button class="quiet" id="history" type="button">字幕记录</button>
+      <button class="quiet" id="caption-window" type="button">字幕窗</button>
+    </div>
+  </section>
+  <details id="diagnostics" hidden>
+    <summary>会话延迟与队列</summary>
+    <div id="metrics" class="stats"></div>
+  </details>
+  <script type="module" src="/src/ui/popup.ts"></script>
+</body>
+</html>
